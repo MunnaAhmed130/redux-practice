@@ -10,7 +10,7 @@ const cakeReducer = (state = intialState, action) => {
       if (state.numOfCakes > 0) {
         return {
           ...state,
-          numOfCakes: state.numOfCakes - 1,
+          numOfCakes: state.numOfCakes - action.payload,
         };
       } else {
         return state;
