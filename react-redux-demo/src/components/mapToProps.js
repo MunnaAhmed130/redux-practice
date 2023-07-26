@@ -1,8 +1,8 @@
-import { buyCake } from "../redux/cake/cakeActions";
+import { buyCake } from "../redux";
 
 export const mapStateToProps = (state) => {
   return {
-    numOfCakes: state.numOfCakes,
+    numOfCakes: state.cake.numOfCakes,
   };
 };
 
