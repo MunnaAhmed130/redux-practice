@@ -7,11 +7,13 @@ const initialState = {
   error: "",
 };
 
+// createAsyncThunk(actionType, async Function which returns a promise)
+// createAsyncThunk dispatches the lifecycle methods of a promise as actions
 // Generated pending, fulfilled and rejected action types
 export const fetchUsers = createAsyncThunk("user/fetchUsers", () => {
   return axios
     .get("https://jsonplaceholder.typicode.com/users")
-    .then((res) => res.data.map((user) => user.id));
+    .then((res) => res.data);
 });
 
 const userSlice = createSlice({

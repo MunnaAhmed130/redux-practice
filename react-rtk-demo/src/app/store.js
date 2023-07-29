@@ -1,4 +1,4 @@
-import configureStore from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { cakeReducer, icecreamReducer, userReducer } from "../features";
 
 // const logger = reduxLogger.createLogger();
